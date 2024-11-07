@@ -23,3 +23,5 @@ Technologies Used
 - OpenVPN for creating the VPN server and clients.
 
 This project simulates a secure private network environment using virtual machines, thus facilitating performance and security testing of VPN configurations in a local setup.
+
+To start the OpenVPN server : sudo systemctl start openvpn@server
