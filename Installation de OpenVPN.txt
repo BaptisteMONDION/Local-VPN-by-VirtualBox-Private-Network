@@ -1,0 +1,6 @@
+# Mise à jour du système
+sudo apt update
+sudo apt upgrade -y
+
+# Installation de OpenVPN et Easy-RSA (pour gérer les certificats)
+sudo apt install openvpn easy-rsa -y

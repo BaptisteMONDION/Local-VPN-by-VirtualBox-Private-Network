@@ -1,0 +1,3 @@
+push "redirect-gateway def1 bypass-dhcp"
+sudo iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -o eth0 -j MASQUERADE
+sudo sysctl -w net.ipv4.ip_forward=1
