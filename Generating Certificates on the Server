@@ -1,38 +1,46 @@
-**Generating Certificates on the Server**
+# Generating Certificates on the Server
 
-I use Easy-RSA to generate the necessary certificates for the VPN connection.
+To generate the necessary certificates for the VPN connection, I use Easy-RSA.
 
-1.	Create a directory to store the certificates:
+## Steps:
 
-Bash
-make-cadir ~/openvpn-ca
-cd ~/openvpn-ca
+1. **Create a directory to store the certificates:**
 
-2.	Edit the configuration variables:
+    ```bash
+    make-cadir ~/openvpn-ca
+    cd ~/openvpn-ca
+    ```
 
-Bash
-nano vars
+2. **Edit the configuration variables:**
 
-3.	Initialize the variables and create the Certificate Authority (CA):
+    ```bash
+    nano vars
+    ```
 
-Bash
-source vars
-./clean-all
-./build-ca
+3. **Initialize the variables and create the Certificate Authority (CA):**
 
-4.	Create a certificate for the server and clients:
+    ```bash
+    source vars
+    ./clean-all
+    ./build-ca
+    ```
 
-Bash
-./build-key-server server
-./build-key client1
+4. **Create a certificate for the server and clients:**
 
-5.	Create the Diffie-Hellman certificate:
+    ```bash
+    ./build-key-server server
+    ./build-key client1
+    ```
 
-Bash
-./build-dh
+5. **Create the Diffie-Hellman certificate:**
 
-6.	Copy the necessary files into the OpenVPN configuration directory:
+    ```bash
+    ./build-dh
+    ```
 
-Bash
-cd ~/openvpn-ca/keys
-sudo cp server.crt server.key ca.crt dh2048.pem /etc/openvpn/
+6. **Copy the necessary files into the OpenVPN configuration directory:**
+
+    ```bash
+    cd ~/openvpn-ca/keys
+    sudo cp server.crt server.key ca.crt dh2048.pem /etc/openvpn/
+    ```
