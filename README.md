@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This project demonstrates how to create a local **Virtual Private Network (VPN)** using virtual machines to simulate a secure network environment. We use **VirtualBox** as the hypervisor and **OpenVPN** to set up the VPN server and clients.
+This project demonstrates how to create a local **Virtual Private Network (VPN)** using virtual machines to simulate a secure network environment. I use **VirtualBox** as the hypervisor and **OpenVPN** to set up the VPN server and clients.
 
 ## Objectives
 
